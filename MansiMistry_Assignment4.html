@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <style>
+        .container{
+            width: 80%;
+            padding: 20px;
+            background-color: rgb(133, 133, 209);
+            margin-left: 10%;
+            margin-top: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: whitesmoke;
+        }
+       .forms{
+            width:100%;
+            padding:5px;
+            margin-top: 20px;
+        }
+        .inp{
+            width: 45%;
+            height: 30px;
+            display: inline-block;
+            margin: 5px;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            text-indent: 10px;
+        }
+        button{
+            padding:5px;
+
+        }
+        span{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Superheros</h2>
+
+        <div class="forms">
+            <div class="inp">
+                <input type="text" placeholder="Add first number" id="num1"/>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Add second number" id="num2"/>
+            </div>
+            <div class="inp">
+                <button onclick="add()">Add the numbers</button>
+            </div>
+        </div>
+
+        <div class="dis">
+            <p>Addition of the the numbers is <span id="data"> </span></p>
+        </div>
+
+    </div>
+
+    <script> 
+        let sum;
+        function display(){
+            document.getElementById("data").innerHTML = sum;
+        }
+        function add(){
+            let num1;
+            let num2;
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+            sum = num1+num2;
+            display();
+        }
+    </script>
+    
+</body>
+</html>
